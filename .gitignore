@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+.expo/
+
+# Entorno y secretos
+.env
+*.pem
+
+# Bases de datos locales
+*.sqlite3
+db.sqlite3
+
+# Datos y modelos pesados (no van a Git)
+ml/data/
+ml/runs/
+*.pt
+*.onnx
+media/
+uploads/
+
+# Sistema
+.DS_Store
+.idea/
+.vscode/
