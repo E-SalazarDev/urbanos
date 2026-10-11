@@ -1,0 +1,10 @@
+campo,tipo,descripcion
+id,texto,Identificador único de la imagen.
+ruta_relativa,texto,Ruta relativa dentro de data/raw.
+clase,texto,Clase: bache o sin_dano.
+etiqueta,entero,"1 = bache, 0 = sin_dano."
+particion,texto,"Partición: train, val o test."
+ancho_px,entero,Ancho de la imagen en píxeles.
+alto_px,entero,Alto de la imagen en píxeles.
+tamano_kb,decimal,Tamaño del archivo en KB.
+md5,texto,Huella para detectar duplicados.

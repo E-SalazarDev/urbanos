@@ -1,0 +1,9 @@
+{
+  "imagenes_encontradas": 681,
+  "invalidas_eliminadas": 0,
+  "contradictorias_eliminadas": 0,
+  "duplicadas_eliminadas": 5,
+  "imagenes_finales": 676,
+  "semilla": 42,
+  "max_por_clase": null
+}

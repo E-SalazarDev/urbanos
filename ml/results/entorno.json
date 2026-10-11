@@ -1,0 +1,10 @@
+{
+  "python": "3.11.9",
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "semilla": 42,
+  "modelos": {
+    "MobileNetV2": "google/mobilenet_v2_1.0_224",
+    "ResNet-50": "microsoft/resnet-50",
+    "ViT-Base": "google/vit-base-patch16-224"
+  }
+}

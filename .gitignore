@@ -19,8 +19,8 @@ dist/
 *.sqlite3
 db.sqlite3
 
-# Datos y modelos pesados (no van a Git)
-ml/data/raw/
+# Datos y modelos pesados
+ml/data/raw/*
 ml/runs/
 *.pt
 *.onnx
