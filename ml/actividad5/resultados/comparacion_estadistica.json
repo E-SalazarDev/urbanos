@@ -1,0 +1,34 @@
+{
+  "metrica": "F1",
+  "modelos": [
+    "regresion_logistica",
+    "random_forest"
+  ],
+  "f1_por_fold": {
+    "regresion_logistica": [
+      0.9158878504672897,
+      0.9444444444444444,
+      0.9158878504672897,
+      0.9333333333333333,
+      0.8932038834951457
+    ],
+    "random_forest": [
+      0.8598130841121495,
+      0.9259259259259259,
+      0.8823529411764706,
+      0.8952380952380953,
+      0.7959183673469388
+    ]
+  },
+  "diferencias_f1_fold_1_menos_fold_2": [
+    0.05607476635514019,
+    0.01851851851851849,
+    0.03353490929081915,
+    0.03809523809523807,
+    0.09728551614820691
+  ],
+  "metodo": "Wilcoxon pareado bilateral sobre F1 por fold",
+  "advertencia": "Solo hay cinco folds y los mejores hiperparámetros se seleccionaron con esos folds; el resultado es exploratorio, no concluyente.",
+  "p_value": 0.0625,
+  "interpretacion": "No se detectó una diferencia estadísticamente significativa al nivel 0.05. Esto no demuestra que los modelos sean iguales."
+}

@@ -1,0 +1,84 @@
+{
+  "modelo": "random_forest",
+  "run_id": "94f0d4461e174db496c8843f497427ef",
+  "fecha_utc": "2026-10-18T19:35:36.626993+00:00",
+  "dataset": "datos/datos_limp/dataset_limpio.csv",
+  "n_registros_total": 668,
+  "n_train": 534,
+  "n_test": 134,
+  "n_caracteristicas": 16,
+  "semilla": 42,
+  "test_size": 0.2,
+  "validacion_cruzada": {
+    "tipo": "StratifiedKFold",
+    "n_splits": 5,
+    "criterio_busqueda": "f1",
+    "f1_media_mejor_configuracion": 0.8718496827599159,
+    "f1_desviacion_estandar": 0.043570679861384444,
+    "f1_media_train_mejor_configuracion": 0.9961881706554486
+  },
+  "mejores_hiperparametros": {
+    "class_weight": "balanced",
+    "max_depth": 10,
+    "min_samples_leaf": 1,
+    "min_samples_split": 5,
+    "n_estimators": 400
+  },
+  "metricas_test": {
+    "accuracy": 0.917910447761194,
+    "precision": 0.8985507246376812,
+    "recall": 0.9393939393939394,
+    "f1": 0.9185185185185185,
+    "roc_auc": 0.9598930481283423,
+    "cv_f1_media": 0.8718496827599159,
+    "cv_f1_std": 0.043570679861384444,
+    "cv_f1_train_media": 0.9961881706554486
+  },
+  "matriz_confusion": [
+    [
+      61,
+      7
+    ],
+    [
+      4,
+      62
+    ]
+  ],
+  "classification_report": {
+    "sin_dano": {
+      "precision": 0.9384615384615385,
+      "recall": 0.8970588235294118,
+      "f1-score": 0.9172932330827067,
+      "support": 68.0
+    },
+    "bache": {
+      "precision": 0.8985507246376812,
+      "recall": 0.9393939393939394,
+      "f1-score": 0.9185185185185185,
+      "support": 66.0
+    },
+    "accuracy": 0.917910447761194,
+    "macro avg": {
+      "precision": 0.9185061315496098,
+      "recall": 0.9182263814616756,
+      "f1-score": 0.9179058758006127,
+      "support": 134.0
+    },
+    "weighted avg": {
+      "precision": 0.9188039734438177,
+      "recall": 0.917910447761194,
+      "f1-score": 0.9178967318794499,
+      "support": 134.0
+    }
+  },
+  "artefactos": {
+    "resultados_cv": "resultados\\random_forest_resultados_cv.csv",
+    "reporte_clasificacion": "resultados\\random_forest_classification_report.csv",
+    "predicciones_test": "resultados\\random_forest_predicciones_test.csv",
+    "matriz_confusion_csv": "resultados\\random_forest_matriz_confusion.csv",
+    "matriz_confusion": "evidencias\\modelos\\random_forest_matriz_confusion.png",
+    "curva_roc": "evidencias\\modelos\\random_forest_curva_roc.png",
+    "importancia_variables": "evidencias\\modelos\\random_forest_importancia_variables.png",
+    "importancia_variables_csv": "resultados\\random_forest_importancia_variables.csv"
+  }
+}

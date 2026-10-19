@@ -1,0 +1,41 @@
+# Dependencias del proyecto UrbanOS ML
+# Python 3.11 recomendado
+
+# Procesamiento de datos
+numpy==2.4.6
+pandas==3.0.6
+Pillow==12.3.0
+openpyxl==3.1.5
+
+# Machine Learning y métricas
+scikit-learn==1.9.1
+scipy==1.17.1
+joblib==1.6.0
+
+# Modelos preentrenados de Hugging Face
+transformers==5.19.0
+datasets==5.1.0
+huggingface-hub==2.2.0
+
+# Visualización
+matplotlib==3.11.2
+
+# PyTorch
+# Para usar GPU NVIDIA, instalar estas versiones con soporte CUDA desde https://pytorch.org/get-started/locally/
+torch==2.11.0
+torchvision==0.26.0
+
+# =====================================================================
+# AGREGADO EN LA ACTIVIDAD 5 (seguimiento de experimentos y notebook)
+# Versiones del entorno con el que se ejecutó train.py el 18-oct-2026
+# =====================================================================
+# Actividad 5 usa, de las secciones anteriores: numpy, pandas, Pillow,
+# scikit-learn, scipy y matplotlib (mismas versiones). torch, transformers,
+# datasets y huggingface-hub son de la Actividad 4 y no se necesitan aquí.
+
+# Seguimiento de experimentos (servidor y cliente)
+mlflow==3.17.1
+
+# Notebook fuentes/entrena.ipynb
+ipykernel==7.4.0
+nbformat==5.11.1

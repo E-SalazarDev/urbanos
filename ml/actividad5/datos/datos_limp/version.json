@@ -1,0 +1,27 @@
+{
+  "version": "v1-71d200e2",
+  "sha256": "71d200e2cc456e0dd75c761b7e5ddaa633aff8fcce903dd40e2f20946066e64d",
+  "fecha": "2026-10-17",
+  "reporte": {
+    "filas_iniciales": 681,
+    "filas_finales": 668,
+    "eliminadas_por_regla": {
+      "casi_duplicada": 8,
+      "duplicada_exacta": 5
+    },
+    "balance_inicial": {
+      "sin_dano": 352,
+      "bache": 329
+    },
+    "balance_final": {
+      "sin_dano": 341,
+      "bache": 327
+    },
+    "umbrales": {
+      "lado_minimo_px": 64,
+      "relacion_aspecto_maxima": 4.0,
+      "distancia_hamming_casi_duplicadas": 4,
+      "factor_iqr_atipicos": 1.5
+    }
+  }
+}
