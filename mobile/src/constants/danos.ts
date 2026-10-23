@@ -16,3 +16,6 @@ export const ESTADOS_TRAMO = {
   regular: { nombre: 'Regular', icono: 'warning', color: '#D97706' },
   malo: { nombre: 'Malo', icono: 'close-circle', color: '#DC2626' },
 } satisfies Record<string, Info>;
+
+export type TipoDano = keyof typeof TIPOS_DANO;
+export type EstadoTramo = keyof typeof ESTADOS_TRAMO;
