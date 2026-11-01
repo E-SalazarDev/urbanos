@@ -16,6 +16,7 @@ class Configuracion:
     confianza_minima: float
     max_mb: int
     ruta_modelo: str
+    ruta_clasificador: str
 
 
 def cargar():
@@ -25,6 +26,7 @@ def cargar():
         confianza_minima=float(_texto("AI_CONFIANZA_MIN", "0.25")),
         max_mb=int(_texto("AI_MAX_MB", "10")),
         ruta_modelo=_texto("AI_RUTA_MODELO", "modelos/detector_rdd2022.pt"),
+        ruta_clasificador=_texto("AI_RUTA_CLASIFICADOR", "modelos/clasificador_baches.joblib"),
     )
     if config.modo not in MODOS_VALIDOS:
         raise ValueError(f"AI_MODE debe ser uno de {MODOS_VALIDOS}, no '{config.modo}'.")
