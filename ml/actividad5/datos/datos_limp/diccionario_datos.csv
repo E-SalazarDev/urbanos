@@ -1,0 +1,27 @@
+campo,tipo,descripcion
+ruta_relativa,texto,Ruta de la imagen dentro de la carpeta de imágenes.
+clase,texto,"Clase original, deducida de la carpeta: 'bache' o 'sin_dano'."
+etiqueta,entero,"Clase codificada: 1 = bache, 0 = sin_dano."
+md5,texto,Huella exacta del archivo; detecta duplicados idénticos.
+huella,texto,Huella perceptual (dHash de 64 bits); detecta imágenes casi idénticas.
+ancho_px,entero,Ancho original en píxeles.
+alto_px,entero,Alto original en píxeles.
+relacion_aspecto,decimal,Ancho dividido entre alto.
+tamano_kb,decimal,Peso del archivo en kilobytes.
+rojo_media,decimal,Promedio del canal rojo (0 a 1).
+verde_media,decimal,Promedio del canal verde (0 a 1).
+azul_media,decimal,Promedio del canal azul (0 a 1).
+rojo_desv,decimal,Desviación estándar del canal rojo.
+verde_desv,decimal,Desviación estándar del canal verde.
+azul_desv,decimal,Desviación estándar del canal azul.
+brillo_media,decimal,Brillo promedio en escala de grises (0 a 1).
+brillo_desv,decimal,Variación del brillo.
+contraste,decimal,Diferencia entre los percentiles 95 y 5 del brillo.
+proporcion_oscura,decimal,Fracción de píxeles con brillo menor a 0.25.
+proporcion_clara,decimal,Fracción de píxeles con brillo mayor a 0.75.
+saturacion_media,decimal,Saturación promedio del color (0 a 1).
+densidad_bordes,decimal,Fracción de píxeles donde el brillo cambia bruscamente.
+nitidez,decimal,Varianza del laplaciano; mide el detalle fino.
+entropia,decimal,"Entropía del histograma de brillo, en bits."
+textura_bloques,decimal,Promedio de la variación del brillo dentro de bloques de 8x8.
+n_variables_atipicas,entero,Cuántas variables de la fila quedan fuera de 1.5 veces el rango intercuartil.

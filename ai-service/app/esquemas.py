@@ -46,3 +46,31 @@ class ResultadoDeteccion(BaseModel):
     modelo: InfoModelo
     imagen: TamanoImagen
     detecciones: list[Deteccion]
+
+
+
+
+class InfoClasificador(BaseModel):
+    nombre: str
+    version: str
+    algoritmo: str
+    umbral: float = Field(description="Probabilidad desde la cual la foto se considera bache.")
+    dataset: str = Field(description="Versión del dataset con el que se entrenó.")
+    metricas_prueba: dict | None = Field(default=None, description="Métricas medidas con el conjunto de prueba.")
+    columnas_entrada: list[str]
+
+
+class ResultadoClasificacion(BaseModel):
+    simulado: bool = Field(description="Siempre False: este resultado sí viene de un modelo entrenado.")
+    modelo: InfoModelo
+    imagen: TamanoImagen
+    es_bache: bool = Field(description="True si la probabilidad alcanza el umbral del modelo.")
+    probabilidad_bache: float = Field(ge=0, le=1)
+    umbral: float
+    caracteristicas: dict[str, float] = Field(description="Las 16 medidas de la imagen que recibió el modelo.")
+    fuera_de_rango: list[str] = Field(
+        description="Medidas que quedaron fuera del rango visto en el entrenamiento."
+    )
+    advertencia: str | None = Field(
+        default=None, description="Aviso cuando la foto es muy distinta a las del entrenamiento."
+    )

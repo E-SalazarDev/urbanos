@@ -31,3 +31,8 @@ uploads/
 .DS_Store
 .idea/
 .vscode/
+
+# MLflow local (Actividad 5)
+ml/actividad5/mlflow.db
+ml/actividad5/mlartifacts/
+ml/actividad5/mlruns/

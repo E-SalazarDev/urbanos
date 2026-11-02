@@ -2,23 +2,12 @@ import { StyleSheet, View } from 'react-native';
 
 import { Presionable } from '../Presionable';
 import { COLORES_CAMARA } from './colores';
-import type { ModoCaptura } from './SelectorModo';
 
-type Props = {
-  modo: ModoCaptura;
-  onPress?: () => void;
-};
-
-
-export function BotonDisparo({ modo, onPress }: Props) {
+/** Botón grande para tomar la foto. */
+export function BotonDisparo({ onPress }: { onPress?: () => void }) {
   return (
-    <Presionable
-      onPress={onPress}
-      haptico
-      accessibilityLabel={modo === 'foto' ? 'Tomar foto' : 'Grabar video'}
-      estilo={estilos.anillo}
-    >
-      <View style={[estilos.centro, modo === 'video' && estilos.centroVideo]} />
+    <Presionable onPress={onPress} haptico accessibilityLabel="Tomar foto" estilo={estilos.anillo}>
+      <View style={estilos.centro} />
     </Presionable>
   );
 }
@@ -39,5 +28,4 @@ const estilos = StyleSheet.create({
     borderRadius: 31,
     backgroundColor: COLORES_CAMARA.blanco,
   },
-  centroVideo: { backgroundColor: COLORES_CAMARA.grabando },
 });

@@ -1,9 +1,9 @@
+
 name: urbanos
 
 services:
   db:
     image: postgis/postgis:17-3.5
-  
     platform: linux/amd64
     container_name: urbanos-db
     restart: unless-stopped
@@ -12,7 +12,6 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:?Falta POSTGRES_USER en el archivo .env}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Falta POSTGRES_PASSWORD en el archivo .env}
     ports:
-
       - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
     volumes:
       - urbanos_db_datos:/var/lib/postgresql/data
@@ -21,6 +20,27 @@ services:
       interval: 5s
       timeout: 5s
       retries: 12
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v3.17.1
+    container_name: urbanos-mlflow
+    restart: unless-stopped
+    working_dir: /mlflow
+    command:
+      - mlflow
+      - server
+      - --host
+      - 0.0.0.0
+      - --port
+      - "5000"
+      - --backend-store-uri
+      - sqlite:////mlflow/mlflow.db
+      - --default-artifact-root
+      - /mlflow/mlartifacts
+    ports:
+      - "127.0.0.1:5000:5000"
+    volumes:
+      - ../ml/actividad5:/mlflow
 
 volumes:
   urbanos_db_datos:

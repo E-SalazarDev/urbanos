@@ -2,9 +2,9 @@ import { useRouter } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
 
 import { Boton } from '../../components/Boton';
-import { Esqueleto } from '../../components/Esqueleto';
 import { Insignia } from '../../components/Insignia';
 import { Pantalla } from '../../components/Pantalla';
+import { TarjetaServicioIA } from '../../components/servicio/TarjetaServicioIA';
 import { Tarjeta } from '../../components/Tarjeta';
 import { Texto } from '../../components/Texto';
 import { TIPOS_DANO } from '../../constants/danos';
@@ -15,15 +15,7 @@ export default function Inicio() {
 
   return (
     <Pantalla titulo="UrbanOS" subtitulo="Cuida las calles de tu ciudad">
-      <Tarjeta>
-        <Texto variante="subtitulo">Resumen</Texto>
-       
-        <Esqueleto alto={20} ancho="60%" />
-        <Esqueleto alto={14} ancho="90%" />
-        <Texto variante="pequeno" suave>
-          Aún no hay datos. Aparecerán cuando la app se conecte con el servidor.
-        </Texto>
-      </Tarjeta>
+      <TarjetaServicioIA />
 
       <Boton texto="Capturar foto" icono="camera" onPress={() => router.push('/capturar')} />
 
@@ -39,6 +31,7 @@ export default function Inicio() {
       <Tarjeta>
         <Texto variante="subtitulo">Próximamente</Texto>
         <View style={estilos.fila}>
+          <Insignia texto="Resumen de la ciudad" icono="time-outline" />
           <Insignia texto="Reportes ciudadanos" icono="time-outline" />
           <Insignia texto="Órdenes de trabajo" icono="time-outline" />
         </View>

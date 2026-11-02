@@ -1,18 +1,17 @@
 import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet } from 'react-native';
 
-import type { NombreIcono } from '../../constants/danos';
 import { Presionable } from '../Presionable';
 import { COLORES_CAMARA } from './colores';
 
 type Props = {
-  icono: NombreIcono;
+  icono: keyof typeof Ionicons.glyphMap;
   etiqueta: string;
   onPress?: () => void;
   tamano?: number;
 };
 
-
+/** Botón redondo translúcido para los controles sobre la cámara. */
 export function BotonIcono({ icono, etiqueta, onPress, tamano = 48 }: Props) {
   return (
     <Presionable
